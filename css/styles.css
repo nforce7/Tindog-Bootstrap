@@ -1,0 +1,229 @@
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+}
+
+.container-fluid {
+  /* dodan padding da se tekst u kontejneru pomakne više na sredinu */
+  padding: 3% 15% 4%;
+  /*Ako hoću da navbar bude više prema gornjem rubu ekrana, onda u padding stavim : 0 15% 3% 15%; */
+}
+
+/* headings */
+.big-heading {
+  font-weight: 600;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-weight: 600;
+  font-size: 3vw;
+  /* responzivni tekst. vw je 1% širine viewporta */
+  line-height: 1.5;
+}
+
+
+/* Sections */
+
+.colored-section{
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section{
+  background-color: white;
+}
+
+/* Navigation Bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+
+/* Title section */
+#title {
+  text-align: left;
+}
+
+/* Download gumbi */
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+.kontejner-slike {
+  position: relative;
+  /* ovaj position mora biti relative jer sam izvadio sliku iz document flow (pozicija slike je absolute) */
+}
+
+/* Title image */
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  margin-left: 12%;
+  position: absolute;
+  /* ovo je napravljeno da slika mobitela ide ispod features sekcije */
+  z-index: 0;
+  /* Z index mobitela je 0. Od features sekcije je 1, znači ona  */
+}
+
+/* napomena: ovo može i ne mora biti jer je z index slike po defaultu 0 */
+
+
+/* Features sekcija */
+#features {
+  padding: 7% 14%;
+  position: relative;
+  /* ovo je napravljeno da slika mobitela ide ispod features sekcije */
+  z-index: 1;
+  /* Z index mobitela je 0. Od features sekcije je 1, znači ona  */
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.features-section {
+  padding: 4.5%;
+}
+
+.features_text {
+  color: #8f8f8f;
+}
+
+.features-icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.features-icon:hover {
+  color: #ff4c68;
+}
+
+/* -------------MEDIA QUERY---------------- */
+@media (max-width: 1036px) {
+
+  /* Za 1036 pixela i manje (to sam testirao mjenjajući širinu chromea) */
+  #title {
+    text-align: center;
+    /* sve je centrirano) */
+  }
+
+  .title-image {
+    /* Za 1036 pixela i manje želim da slika postane static(znači da nije više izvan document flowa)) */
+    position: static;
+    transform: rotate(0);
+    margin-left: 0%;
+    /* Kad ovo ne bi stavio, slika ne bi bila na sredini na mobitelu, nego bi imala margin kao i u glavnom .title-imageu */
+    /* i da ne bude više zarotirana) */
+  }
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: #ef8172;    /* makar smo testimonial sekciji dali klasu "colored-section" koja ima drugu boju, ostaje peachy boja jer je id more specific */
+}
+
+.testimonial-text {
+  font-weight: 600;
+  font-size: 3vw;
+  /* responzivni tekst. vw je 1% širine viewporta */
+  line-height: 1.5;
+}
+
+.carousel-item {
+  padding: 7% 13%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#press {
+  background-color: #ef8172;  /* makar smo press sekciji dali klasu "colored-section" koja ima drugu boju, ostaje peachy boja jer je id more specific */
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* PRICING DIO */
+#pricing {
+  padding: 50px;
+}
+
+.kartica-heading {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.price-text {
+  font-weight: 600;
+  font-size: 3vw;
+  /* responzivni tekst. vw je 1% širine viewporta */
+  line-height: 1.5;
+}
+
+/*Sekcija CTA */
+#cta {
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+.h3-cta {
+  font-family: "Montserrat";
+  font-weight: bolder;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.download-button-cta {
+  margin: 5% 2% 0% 0;
+}
+
+/*Sekcija footer */
+#footer {
+  padding-top: 5%;
+}
+
+.footer-text {
+  color: #8f8f8f;
+}
+
+.probai {
+  padding: 0% 1% 2% 1%;
+}
